@@ -37,9 +37,9 @@ class ControllerCommonHeader extends Controller {
 
 		$data['name'] = $this->config->get('config_name');
 		
-		//моя вставка
+		//моя вставка для верхнего меню
 		
-		/* $data['text_information'] = $this->language->get('text_information');
+		$data['text_information'] = $this->language->get('text_information');
 				$this->load->model('catalog/information');
 				$data['informations'] = array();
 				foreach ($this->model_catalog_information->getInformations() as $result) {
@@ -50,9 +50,16 @@ class ControllerCommonHeader extends Controller {
 						);
 					}
 				}
-				$data['contact'] = $this->url->link('information/contact'); */
+				$data['contact'] = $this->url->link('information/contact');
 		
-		//Конец
+		//Конец верхнего меню
+		
+		//Моя вставка для Контактов
+		
+		$data['text_contact'] = $this->language->get('text_contact');
+		$data['contact'] = $this->url->link('information/contact');
+		
+		//Конец Контактов
 		
 		
 

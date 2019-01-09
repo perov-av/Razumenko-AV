@@ -16,6 +16,7 @@ body
 		// image: url(../image/fon.jpg)
 
 // Верхняя темная полоса в шапке с лого
+
 header
 	padding: 12px 0
 	background-color: #333333
@@ -84,5 +85,92 @@ header
 .rp-header-ul
 	margin-top: 10px
 	left: 0
+
+// Конец стилей: Верхняя темная полоса в шапке с лого
+
+// Полоса меню с зеленой кнопкой корзины
+
+.rp-white-mnu
+	border-bottom: 1px solid #ededed
+	background-color: rgba(0,0,0,.5)
+	margin-bottom: 60px
+
+
+	.navbar
+		margin-bottom: 0
+		font-size: 16px
+		&-nav
+			> li
+				> a
+					padding-top: 12px
+					padding-bottom: 12px
+					color: #dfdfdf
+					&:hover, &:focus, &:active
+						color: $orange
+						text-decoration: underline
+						background-color: transparent
+#cart
+	button
+		background-color: $green
+		border-radius: 0
+		color: #fff
+		font-family: mspThin, sans-serif
+		padding: 12px 5px
+.rp-wrap
+	padding: 0  		
+
+.navbar-header
+	button
+		color: $orange
+		
+		&:focus, &:hover
+			color: $orange
+			
+.rp-category
+	color: $orange
+	text-transform: uppercase
+	font-family: mspBold, sans-serif
+	display: inline-block
+	padding: 14px 5px
+// Конец стилей: Полоса меню с зеленой кнопкой корзины
+
+// Стили для Слайдшоу на главной
+
+.owl-wrapper-outer
+	border: none
+	box-shadow: none
+	border-radius: none
+
+.owl-theme
+	.owl-pagination
+		display: none
+.owl-controls
+	.owl-buttons
+		div
+			i
+				color: $orange
+// Конец: Стили для Слайдшоу на главной
+
+// Стили для меню кактегорий слева
+#column-left
+	.list-group
+		a.list-group-item
+			transition: background .2s ease, color .2s ease, text-indent .35s ease, border-color .2s ease
+
+a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, button.list-group-item:hover
+	background-color: $blue
+	color: #ffffff
+	border-color: $blue
+	text-indent: 12px
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover
+	background-color: darken($blue, 7%)
+	border-color: darken($blue, 7%)
+	text-indent: 12px
+	color: #ffffff
+
+
+.breadcrumb
+	background-color: lighten($green, 55%)
+	margin-bottom: 40px
 
 @import "media"
