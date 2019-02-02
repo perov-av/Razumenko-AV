@@ -1,4 +1,18 @@
 <?php echo $header; ?>
+
+<div class="home-bg">
+  <div class="home-logo">
+    <img src="<?php echo $logo; ?>" alt="Ремпроф" class="img-responsive" />
+  </div>
+  <div class="home-slogan">
+    Качественный инструмент - 
+    <span>не значит дорого</span> 
+  </div>
+  <div class="home-btn">
+    <span>Начать покупки</span>
+    <a class="rp-click" href="#content"> <i class="fa fa-arrow-circle-down"></i></a>
+  </div>
+</div>
 <div class="container">
   <div class="row"><?php echo $column_left; ?>
     <?php if ($column_left && $column_right) { ?>

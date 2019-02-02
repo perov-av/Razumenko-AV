@@ -27,6 +27,7 @@
 <?php } ?>
 <meta property="og:site_name" content="<?php echo $name; ?>" />
 <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
+
 <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
 <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -39,13 +40,18 @@
     <?php } ?>
     <?php foreach ($scripts as $script) { ?>
       <script src="<?php echo $script; ?>" type="text/javascript"></script>
+      
+     
+
       <?php } ?>
       <?php foreach ($analytics as $analytic) { ?>
         <?php echo $analytic; ?>
         <?php } ?>
-<link href="catalog/view/theme/remprof/stylesheet/stylesheet.css" rel="stylesheet">
-      </head>
-      <body class="<?php echo $class; ?>">
+  <link href="catalog/view/theme/remprof/stylesheet/stylesheet.css" rel="stylesheet">
+  <script src="catalog/view/theme/remprof/libs/equalheights/equalheights.js" type="text/javascript"></script>
+  <script src="catalog/view/theme/remprof/js/rp-common.js" type="text/javascript"></script>
+</head>
+<body class="<?php echo $class; ?>">
         
         
 <header>
@@ -93,7 +99,7 @@
   </div>
 </header>
 
-<nav id="top" class="rp-white-mnu">
+<nav id="top" class="rp-white-mnu container-fluid">
 
 
   <div class="container">

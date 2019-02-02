@@ -82,6 +82,7 @@ header
 			border-color: #626262
 			transition: background-color 0.25s ease
 			
+			
 .rp-header-ul
 	margin-top: 10px
 	left: 0
@@ -92,8 +93,9 @@ header
 
 .rp-white-mnu
 	border-bottom: 1px solid #ededed
-	background-color: rgba(0,0,0,.5)
+	background-color: rgba(0,0,0,.6)
 	margin-bottom: 60px
+	z-index: 100
 
 
 	.navbar
@@ -109,15 +111,36 @@ header
 						color: $orange
 						text-decoration: underline
 						background-color: transparent
-#cart
-	button
-		background-color: $green
-		border-radius: 0
-		color: #fff
-		font-family: mspThin, sans-serif
-		padding: 12px 5px
+
 .rp-wrap
-	padding: 0  		
+	padding: 0	
+	#cart
+		button
+			background-color: $green
+			border-radius: 0
+			color: #fff
+			font-family: mspThin, sans-serif
+			padding: 12px 5px
+		.dropdown-menu
+			padding: 15px
+			width: 520px
+			.table-striped
+				td.text-center
+					width: 13%
+					button.btn-danger
+						border-radius: 50%
+						width: 25px
+						height: 25px
+						padding: 0
+						line-height: 25px
+						font-size: 14px
+						background-color: #d9534f
+					img
+						width: 50px
+						height: 50px
+				td.text-left
+					width: 44%
+				
 
 .navbar-header
 	button
@@ -142,6 +165,7 @@ header
 	border-radius: none
 
 .owl-theme
+	margin-bottom: 90px
 	.owl-pagination
 		display: none
 .owl-controls
@@ -172,5 +196,138 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
 .breadcrumb
 	background-color: lighten($green, 55%)
 	margin-bottom: 40px
+
+// Конец: Стили для меню кактегорий слева
+
+// Стили для рекомендуемых товаров на главной и карточки товара
+
+.common-home
+	#content
+		h3
+			text-align: center
+			font-size: 34px
+			font-family: mspThin, sans-serif
+			margin-bottom: 20px
+
+.product-layout
+	.price
+		font-size: 18px
+		.price-old
+			color: red
+			font-size: 15px
+			text-decoration: line-through
+			padding-left: 10px
+	> .product-thumb
+		border: solid 1px transparent
+		transition: border .3s ease
+		padding: 30px 0 0
+		text-align: center
+		margin: 20px 0
+		.image
+			padding: 5px 20px
+		&:hover
+			border-color: $orange
+			.rp-btn-compare
+				opacity: 0.6
+
+	.caption
+		padding: 0 20px
+		h4
+			margin-top: 15px
+			a
+				color: #333333
+				font-size: 22px
+				font-family: mspThin, sans-serif
+				transition: border .3s ease
+				&:hover, &:focus
+					text-decoration: none
+					border-bottom: 1px solid #333333
+		p 
+			display: none
+			&.price
+				display: block
+			.price-tax
+				display: none
+		.rating
+			display: none
+	.button-group
+		margin-top: 15px
+		font-size: 18px
+		.rp-btn-cart
+			width: 100%
+			border: none
+			background-color: lighten($green, 5%)
+			color: #ffffff
+			padding: 7px 0
+			transition: background-color .3s ease
+			&:hover
+				background-color: $green
+				
+		.rp-btn-wish
+			display: none
+
+		.rp-btn-compare
+			opacity: 0
+			position: absolute
+			right: 16px
+			top: 20px
+			width: 20%
+			border: none
+			background-color: $orange
+			color: #fff
+			padding: 7px 0
+			transition: background-color .3s ease
+			transition: opacity .3s ease
+			&:hover
+				opacity: 1
+		
+		a.button
+			display: block
+			width: 100%
+			background-color: $blue
+			color: #fff
+			padding: 7px 0
+			transition: background-color .3s ease
+			text-decoration: none
+				
+			&:hover
+				background-color: darken($blue, 7%)
+// Конец: Стили для рекомендуемых товаров на главной и карточки товара
+
+// Стили для главной
+.home-bg
+	margin: -110px 0 40px 
+	background-image: url(../image/home-bg.jpg)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	height: 100vh
+	padding: 8% 30%
+	.home-logo
+		margin: 0 auto 50px
+		width: 80%
+	.home-slogan
+		color: #ffffff
+		margin: 0 auto 80px
+		text-align: center
+		font-size: 40px
+		font-weight: bold
+		span
+			display: block
+	.home-btn
+		margin: 0 auto 20px
+		width: 230px
+		height: 130px
+		text-align: center
+		color: $orange
+		i
+			font-size: 52px
+			color: $orange
+		span
+			font-size: 26px
+			display: block
+
+
+// Конец: Стили для главной	
 
 @import "media"
